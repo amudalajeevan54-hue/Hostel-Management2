@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management System • Central Administration Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Top University / Campus Bar -->
+<div class="top-university-bar">
+    <div class="top-bar-left">
+        <span class="top-bar-dot"></span>
+        <span>Hostel Campus Portal • Room Records &amp; Administration</span>
+    </div>
+    <div class="top-bar-right">
+        <span class="top-bar-badge">SYSTEM ACTIVE</span>
+        <span id="currentTime">HostelOS v2.4</span>
+    </div>
+</div>
+
+<!-- Sticky Header Navigation -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="index.html" class="brand-logo-link">
+            <div class="brand-icon-box">
+                <svg viewBox="0 0 24 24">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm6 12H6v-1.4c0-2 4-3.1 6-3.1s6 1.1 6 3.1V18z"/>
+                </svg>
+            </div>
+            <div class="brand-text-col">
+                <div class="brand-title">HOSTEL<span>MANAGEMENT</span></div>
+                <div class="brand-tagline">Campus Housing Administration</div>
+            </div>
+        </a>
+
+        <nav class="navbar">
+            <a href="index.html" class="nav-link active">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                Home
+            </a>
+            <a href="list.html" class="nav-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+                List Rooms
+            </a>
+            <a href="listone.html" class="nav-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                List Required Room
+            </a>
+            <a href="insert.html" class="nav-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                Insert Room
+            </a>
+            <a href="update.html" class="nav-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+                Update Room
+            </a>
+            <a href="delete.html" class="nav-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+                Delete Room
+            </a>
+        </nav>
+    </div>
+</header>
+
+<main class="main-wrapper">
+    <div class="container container-wide">
+
+        <!-- Hero Section with Unique Exterior Photograph -->
+        <div class="home-hero-card">
+            <img src="images/home_hero.jpg"
+                 alt="Modern Luxury Student Residence Exterior"
+                 class="home-hero-bg"
+                 onerror="this.onerror=null; this.src='images/campus_bg.jpg';">
+            <div class="home-hero-gradient"></div>
+
+            <div class="home-hero-content">
+                <div class="home-hero-badge">
+                    <span class="top-bar-dot"></span>
+                    Central Administration
+                </div>
+                <h1 class="home-hero-title">Hostel <span>Management</span> System</h1>
+                <p class="home-hero-desc">
+                    Comprehensive portal to manage campus room allocations, monitor bed availability, register new facilities, and oversee real-time student residence occupancy.
+                </p>
+                <div class="button-group" style="justify-content: flex-start; margin-top: 0;">
+                    <button onclick="location.href='list.html'">
+                        📋 Browse List Rooms →
+                    </button>
+                    <button class="btn-secondary" onclick="location.href='insert.html'" style="background: #ffffff; color: #0a192f; font-weight: 800;">
+                        ➕ Insert Room
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Live Statistics Strip -->
+        <div class="stats-strip">
+            <div class="stat-box">
+                <div class="stat-icon">
+                    <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14z"/><path d="M7 12h2v5H7zm4-7h2v12h-2zm4 4h2v8h-2z"/></svg>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-num" id="totalRoomsCount">--</span>
+                    <span class="stat-label">Total Rooms</span>
+                </div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-icon" style="background: #f0fdf4; color: #16a34a; border-color: #bbf7d0;">
+                    <svg viewBox="0 0 24 24"><path d="M19 7h-8v6H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4zm-8 4h6c1.1 0 2 .9 2 2v2H11v-4z"/><circle cx="7" cy="11" r="2"/></svg>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-num" id="availableBedsCount" style="color: #16a34a;">--</span>
+                    <span class="stat-label">Available Beds</span>
+                </div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-icon" style="background: #eff6ff; color: #2563eb; border-color: #bfdbfe;">
+                    <svg viewBox="0 0 24 24"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-num" id="occupiedBedsCount">--</span>
+                    <span class="stat-label">Occupied Beds</span>
+                </div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-icon" style="background: #fdf4ff; color: #a855f7; border-color: #f5d0fe;">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                </div>
+                <div class="stat-info">
+                    <span class="stat-num" id="occupancyRate">--%</span>
+                    <span class="stat-label">Occupancy Rate</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Operations Grid -->
+        <div class="header-center" style="margin-top: 1.5rem; margin-bottom: 1.25rem;">
+            <div class="brand-badge">
+                <span class="brand-badge-dot"></span>
+                Operations &amp; Control
+            </div>
+            <h2 style="font-size: 1.75rem; color: #070d17; font-weight: 800; letter-spacing: -0.4px;">Hostel Management Services</h2>
+            <p class="page-subtitle" style="color: #334155; font-weight: 500;">
+                Click any service below to open its dedicated room administration workspace
+            </p>
+        </div>
+
+        <div class="menu-grid services-grid">
+
+            <!-- 1. List Rooms -->
+            <button class="menu-button service-card" onclick="location.href='list.html'" title="Open List Rooms Directory">
+                <div class="service-card-top">
+                    <span class="card-pill-tag">Directory Overview</span>
+                    <span class="menu-num">1</span>
+                </div>
+                <div class="menu-content">
+                    <h3 class="menu-title">List Rooms</h3>
+                    <p class="menu-desc">
+                        Browse all registered hostel room numbers, blocks, capacities, and active occupancy
+                    </p>
+                </div>
+                <div class="service-card-footer">
+                    <span class="card-action-text">Explore Directory</span>
+                    <span class="menu-arrow">→</span>
+                </div>
+            </button>
+
+            <!-- 2. List Required Room -->
+            <button class="menu-button service-card" onclick="location.href='listone.html'" title="Search Required Room by ID">
+                <div class="service-card-top">
+                    <span class="card-pill-tag" style="background: #eff6ff; color: #1d4ed8; border-color: #bfdbfe;">Search By ID</span>
+                    <span class="menu-num">2</span>
+                </div>
+                <div class="menu-content">
+                    <h3 class="menu-title">List Required Room</h3>
+                    <p class="menu-desc">
+                        Search and inspect an individual room's detailed occupancy record by room ID
+                    </p>
+                </div>
+                <div class="service-card-footer">
+                    <span class="card-action-text" style="color: #1d4ed8;">Search Record</span>
+                    <span class="menu-arrow">→</span>
+                </div>
+            </button>
+
+            <!-- 3. Insert Room -->
+            <button class="menu-button service-card" onclick="location.href='insert.html'" title="Register New Hostel Room">
+                <div class="service-card-top">
+                    <span class="card-pill-tag" style="background: #f0fdf4; color: #15803d; border-color: #bbf7d0;">New Registration</span>
+                    <span class="menu-num">3</span>
+                </div>
+                <div class="menu-content">
+                    <h3 class="menu-title">Insert Room</h3>
+                    <p class="menu-desc">
+                        Add and register a new hostel room unit, assign its block name and bed capacity
+                    </p>
+                </div>
+                <div class="service-card-footer">
+                    <span class="card-action-text" style="color: #15803d;">Register Room</span>
+                    <span class="menu-arrow">→</span>
+                </div>
+            </button>
+
+            <!-- 4. Update Room -->
+            <button class="menu-button service-card" onclick="location.href='update.html'" title="Modify Existing Room Record">
+                <div class="service-card-top">
+                    <span class="card-pill-tag" style="background: #fefce8; color: #a16207; border-color: #fef08a;">Record Modification</span>
+                    <span class="menu-num">4</span>
+                </div>
+                <div class="menu-content">
+                    <h3 class="menu-title">Update Room</h3>
+                    <p class="menu-desc">
+                        Modify room number, block name, bed capacity, occupied beds, or active status
+                    </p>
+                </div>
+                <div class="service-card-footer">
+                    <span class="card-action-text" style="color: #a16207;">Modify Details</span>
+                    <span class="menu-arrow">→</span>
+                </div>
+            </button>
+
+            <!-- 5. Delete Room -->
+            <button class="menu-button service-card" onclick="location.href='delete.html'" title="Permanently Delete Room Record">
+                <div class="service-card-top">
+                    <span class="card-pill-tag" style="background: #fef2f2; color: #b91c1c; border-color: #fecdd3;">Permanent Deallocation</span>
+                    <span class="menu-num">5</span>
+                </div>
+                <div class="menu-content">
+                    <h3 class="menu-title" style="color: #991b1b;">Delete Room</h3>
+                    <p class="menu-desc">
+                        Permanently deallocate and remove an existing room record from the database
+                    </p>
+                </div>
+                <div class="service-card-footer">
+                    <span class="card-action-text" style="color: #b91c1c;">Remove Record</span>
+                    <span class="menu-arrow">→</span>
+                </div>
+            </button>
+
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div>© 2026 Hostel Management System • Campus Administration Portal</div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="list.html">Directory</a>
+            <a href="listone.html">Search</a>
+            <a href="insert.html">Add Room</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+// Load live statistics from backend without altering existing logic
+fetch("/rooms")
+    .then(res => res.json())
+    .then(data => {
+        if (Array.isArray(data)) {
+            const totalRooms = data.length;
+            let totalCap = 0;
+            let totalOcc = 0;
+            data.forEach(r => {
+                totalCap += Number(r.room_capacity || 0);
+                totalOcc += Number(r.noofoccupied || 0);
+            });
+            const avail = totalCap - totalOcc;
+            const rate = totalCap > 0 ? Math.round((totalOcc / totalCap) * 100) : 0;
+
+            document.getElementById("totalRoomsCount").textContent = totalRooms;
+            document.getElementById("availableBedsCount").textContent = Math.max(0, avail);
+            document.getElementById("occupiedBedsCount").textContent = totalOcc;
+            document.getElementById("occupancyRate").textContent = rate + "%";
+        }
+    })
+    .catch(() => {
+        document.getElementById("totalRoomsCount").textContent = "Active";
+        document.getElementById("availableBedsCount").textContent = "--";
+        document.getElementById("occupiedBedsCount").textContent = "--";
+        document.getElementById("occupancyRate").textContent = "--";
+    });
+</script>
+
+</body>
+</html>

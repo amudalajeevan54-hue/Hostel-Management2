@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 220" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <linearGradient id="bldgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+    <linearGradient id="roofGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Sky Backdrop Card -->
+  <rect x="10" y="10" width="480" height="200" rx="16" fill="url(#skyGrad)" stroke="#bfdbfe" stroke-width="1"/>
+
+  <!-- Clouds -->
+  <circle cx="80" cy="50" r="18" fill="#ffffff" opacity="0.8"/>
+  <circle cx="102" cy="46" r="24" fill="#ffffff" opacity="0.8"/>
+  <circle cx="126" cy="50" r="18" fill="#ffffff" opacity="0.8"/>
+  <circle cx="390" cy="45" r="16" fill="#ffffff" opacity="0.7"/>
+  <circle cx="410" cy="40" r="22" fill="#ffffff" opacity="0.7"/>
+  <circle cx="430" cy="45" r="16" fill="#ffffff" opacity="0.7"/>
+
+  <!-- Ground -->
+  <path d="M 10 185 Q 250 180 490 185 L 490 210 L 10 210 Z" fill="#93c5fd" opacity="0.4"/>
+  <rect x="10" y="195" width="480" height="15" rx="0" fill="#60a5fa" opacity="0.3"/>
+
+  <!-- Trees -->
+  <path d="M 50 195 L 50 160 L 35 160 L 50 135 L 40 135 L 50 115 L 60 135 L 50 135 L 65 160 L 50 160 Z" fill="#059669"/>
+  <path d="M 445 195 L 445 165 L 432 165 L 445 142 L 437 142 L 445 125 L 453 142 L 445 142 L 458 165 L 445 165 Z" fill="#059669"/>
+  <circle cx="85" cy="165" r="16" fill="#10b981" opacity="0.9"/>
+  <rect x="83" y="175" width="4" height="20" fill="#78350f"/>
+  <circle cx="415" cy="165" r="14" fill="#10b981" opacity="0.9"/>
+  <rect x="413" y="174" width="4" height="21" fill="#78350f"/>
+
+  <!-- Main Hostel Building -->
+  <g filter="url(#cardShadow)">
+    <!-- Back Wings -->
+    <rect x="120" y="85" width="85" height="105" rx="4" fill="#1e40af"/>
+    <rect x="295" y="85" width="85" height="105" rx="4" fill="#1e40af"/>
+    
+    <!-- Wing Windows Left -->
+    <rect x="135" y="100" width="16" height="18" rx="2" fill="#dbeafe"/>
+    <rect x="165" y="100" width="16" height="18" rx="2" fill="#dbeafe"/>
+    <rect x="135" y="130" width="16" height="18" rx="2" fill="#dbeafe"/>
+    <rect x="165" y="130" width="16" height="18" rx="2" fill="#dbeafe"/>
+    <rect x="135" y="160" width="16" height="18" rx="2" fill="#dbeafe"/>
+    <rect x="165" y="160" width="16" height="18" rx="2" fill="#dbeafe"/>
+
+    <!-- Wing Windows Right -->
+    <rect x="310" y="100" width="16" height="18" rx="2" fill="#dbeafe"/>
+    <rect x="340" y="100" width="16" height="18" rx="2" fill="#dbeafe"/>
+    <rect x="310" y="130" width="16" height="18" rx="2" fill="#dbeafe"/>
+    <rect x="340" y="130" width="16" height="18" rx="2" fill="#dbeafe"/>
+    <rect x="310" y="160" width="16" height="18" rx="2" fill="#dbeafe"/>
+    <rect x="340" y="160" width="16" height="18" rx="2" fill="#dbeafe"/>
+
+    <!-- Central Center Building -->
+    <rect x="185" y="60" width="130" height="135" rx="4" fill="url(#bldgGrad)"/>
+    <!-- Triangular Roof / Pediment -->
+    <polygon points="175,60 250,28 325,60" fill="url(#roofGrad)"/>
+    <circle cx="250" cy="47" r="7" fill="#ffffff" stroke="#1d4ed8" stroke-width="2"/>
+
+    <!-- Center Windows -->
+    <rect x="205" y="75" width="22" height="24" rx="3" fill="#ffffff"/>
+    <rect x="240" y="75" width="22" height="24" rx="3" fill="#ffffff"/>
+    <rect x="275" y="75" width="22" height="24" rx="3" fill="#ffffff"/>
+
+    <rect x="205" y="112" width="22" height="24" rx="3" fill="#ffffff"/>
+    <rect x="240" y="112" width="22" height="24" rx="3" fill="#ffffff"/>
+    <rect x="275" y="112" width="22" height="24" rx="3" fill="#ffffff"/>
+
+    <!-- Window Frames -->
+    <line x1="216" y1="75" x2="216" y2="99" stroke="#93c5fd" stroke-width="1.5"/>
+    <line x1="205" y1="87" x2="227" y2="87" stroke="#93c5fd" stroke-width="1.5"/>
+    <line x1="251" y1="75" x2="251" y2="99" stroke="#93c5fd" stroke-width="1.5"/>
+    <line x1="240" y1="87" x2="262" y2="87" stroke="#93c5fd" stroke-width="1.5"/>
+    <line x1="286" y1="75" x2="286" y2="99" stroke="#93c5fd" stroke-width="1.5"/>
+    <line x1="275" y1="87" x2="297" y2="87" stroke="#93c5fd" stroke-width="1.5"/>
+
+    <line x1="216" y1="112" x2="216" y2="136" stroke="#93c5fd" stroke-width="1.5"/>
+    <line x1="205" y1="124" x2="227" y2="124" stroke="#93c5fd" stroke-width="1.5"/>
+    <line x1="251" y1="112" x2="251" y2="136" stroke="#93c5fd" stroke-width="1.5"/>
+    <line x1="240" y1="124" x2="262" y2="124" stroke="#93c5fd" stroke-width="1.5"/>
+    <line x1="286" y1="112" x2="286" y2="136" stroke="#93c5fd" stroke-width="1.5"/>
+    <line x1="275" y1="124" x2="297" y2="124" stroke="#93c5fd" stroke-width="1.5"/>
+
+    <!-- Main Grand Entrance -->
+    <rect x="232" y="152" width="36" height="43" rx="4" fill="#1e293b"/>
+    <path d="M 232 165 Q 250 150 268 165 L 268 195 L 232 195 Z" fill="#0f172a"/>
+    <rect x="236" y="166" width="12" height="28" fill="#3b82f6" opacity="0.8"/>
+    <rect x="252" y="166" width="12" height="28" fill="#3b82f6" opacity="0.8"/>
+    <!-- Entrance Steps -->
+    <rect x="224" y="191" width="52" height="4" fill="#cbd5e1"/>
+    <rect x="220" y="195" width="60" height="4" fill="#94a3b8"/>
+  </g>
+
+  <!-- Campus Pathway -->
+  <polygon points="230,199 270,199 285,210 215,210" fill="#e2e8f0"/>
+
+  <!-- Badge Pill: HOSTEL CAMPUS -->
+  <g transform="translate(170, 15)">
+    <rect x="0" y="0" width="160" height="24" rx="12" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5"/>
+    <circle cx="14" cy="12" r="5" fill="#2563eb"/>
+    <text x="26" y="16" font-family="'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#1e40af" letter-spacing="0.5">HOSTEL CAMPUS</text>
+  </g>
+</svg>

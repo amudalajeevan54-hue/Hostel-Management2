@@ -1,0 +1,360 @@
+<!-- UPDATE HOSTEL ROOM DETAILS -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Hostel Room • Room Record Modification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Top Campus Status Bar -->
+<div class="top-university-bar">
+    <div class="top-bar-left">
+        <span class="top-bar-dot"></span>
+        <span>Hostel Campus Portal • Room Records &amp; Administration</span>
+    </div>
+    <div class="top-bar-right">
+        <span class="top-bar-badge">RECORD EDITOR</span>
+        <span>HostelOS v2.4</span>
+    </div>
+</div>
+
+<!-- Sticky Header Navigation -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="index.html" class="brand-logo-link">
+            <div class="brand-icon-box">
+                <svg viewBox="0 0 24 24">
+                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm6 12H6v-1.4c0-2 4-3.1 6-3.1s6 1.1 6 3.1V18z"/>
+                </svg>
+            </div>
+            <div class="brand-text-col">
+                <div class="brand-title">HOSTEL<span>MANAGEMENT</span></div>
+                <div class="brand-tagline">Campus Housing Administration</div>
+            </div>
+        </a>
+
+        <nav class="navbar">
+            <a href="index.html" class="nav-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                Home
+            </a>
+            <a href="list.html" class="nav-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+                List Rooms
+            </a>
+            <a href="listone.html" class="nav-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                List Required Room
+            </a>
+            <a href="insert.html" class="nav-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                Insert Room
+            </a>
+            <a href="update.html" class="nav-link active">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+                Update Room
+            </a>
+            <a href="delete.html" class="nav-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/></svg>
+                Delete Room
+            </a>
+        </nav>
+    </div>
+</header>
+
+<main class="main-wrapper">
+    <div class="container">
+
+        <!-- Modern Hostel Administration Reception Visual -->
+        <div class="page-image-container">
+            <div class="page-image-card" style="height: 230px;">
+                <img src="images/update_room.jpg"
+                     alt="Hostel Management Reception Desk and Floor Plan Terminal"
+                     class="page-image"
+                     style="height: 230px;"
+                     onerror="this.onerror=null; this.src='images/room_interior.jpg';">
+                <div class="image-caption-overlay">
+                    <div>
+                        <div class="caption-tag">Room Modification Console</div>
+                        <div class="caption-title">Capacity &amp; Occupancy Reallocation</div>
+                    </div>
+                    <span style="font-size: 0.8rem; opacity: 0.85;">Administrative Control</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-center">
+            <div class="brand-badge">
+                <span class="brand-badge-dot"></span>
+                Room Record Modification
+            </div>
+            <h1>UPDATE HOSTEL ROOM</h1>
+            <p class="page-subtitle">
+                Select an existing room ID to automatically populate and adjust its details
+            </p>
+        </div>
+
+        <div class="form-card">
+
+            <!-- Step 1: Select Room -->
+            <div class="form-group" style="background: var(--slate-50); padding: 1.25rem; border-radius: var(--radius-md); border: 1.5px solid var(--teal-200); margin-bottom: 1.5rem;">
+                <label for="room_id" style="color: var(--teal-800); font-size: 0.94rem;">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                    </svg>
+                    Step 1: Choose Room ID to Modify
+                </label>
+
+                <select id="room_id" style="border-color: var(--teal-400); font-weight: 600;">
+                    <option value="">Select Room ID</option>
+                </select>
+
+                <p class="helper-text" style="color: var(--teal-700);">
+                    💡 Selecting a room ID will automatically load its current database details into the fields below.
+                </p>
+            </div>
+
+            <!-- Step 2: Edit Form Fields in 2 Columns -->
+            <div class="form-grid-2">
+                <div class="form-group">
+                    <label for="room_no">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                        </svg>
+                        Room Number
+                    </label>
+                    <input type="number" id="room_no"
+                           placeholder="Enter updated room number" min="1">
+                </div>
+
+                <div class="form-group">
+                    <label for="block_name">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/>
+                        </svg>
+                        Block Name
+                    </label>
+                    <input type="text" id="block_name"
+                           placeholder="Enter updated block name" maxlength="40">
+                </div>
+            </div>
+
+            <div class="form-grid-2">
+                <div class="form-group">
+                    <label for="room_capacity">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 7h-8v6H3V5H1v15h2v-3h18v3h2v-9c0-2.21-1.79-4-4-4zm-8 4h6c1.1 0 2 .9 2 2v2H11v-4z"/><circle cx="7" cy="11" r="2"/>
+                        </svg>
+                        Room Capacity
+                    </label>
+                    <input type="number" id="room_capacity"
+                           placeholder="Enter updated room capacity" min="1">
+                </div>
+
+                <div class="form-group">
+                    <label for="noofoccupied">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                        </svg>
+                        Number of Occupied Beds
+                    </label>
+                    <input type="number" id="noofoccupied"
+                           placeholder="Enter occupied beds" min="0">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="status">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+                    </svg>
+                    Room Status
+                </label>
+                <select id="status">
+                    <option value="1">Available / Active</option>
+                    <option value="0">Inactive / Maintenance</option>
+                </select>
+            </div>
+
+            <div class="button-group">
+                <button onclick="updateRoom()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                    </svg>
+                    Update Room Record
+                </button>
+
+                <button class="btn-secondary" onclick="location.href='index.html'">
+                    Home Page
+                </button>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-inner">
+        <div>© 2026 Hostel Management System • Campus Administration Portal</div>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="list.html">Directory</a>
+            <a href="listone.html">Search</a>
+            <a href="insert.html">Add Room</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+
+let roomsList = [];
+
+// Populate room ID dropdown
+function loadRoomIDs() {
+
+    fetch("/rooms")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Unable to load room records");
+        }
+        return response.json();
+    })
+    .then(data => {
+
+        roomsList = data;
+
+        let select = document.getElementById("room_id");
+
+        select.innerHTML =
+            '<option value="">Select Room ID</option>';
+
+        data.forEach(room => {
+
+            let opt = document.createElement("option");
+
+            opt.value = room.room_id;
+            opt.textContent = `Room ID ${room.room_id} (Room ${room.room_no} - Block ${room.block_name})`;
+
+            select.appendChild(opt);
+        });
+
+    })
+    .catch(err => {
+        console.error("Error loading room IDs:", err);
+        alert("Unable to load room records. Check the server and database.");
+    });
+}
+
+loadRoomIDs();
+
+// Auto-fill room details when a room ID is selected
+document.getElementById("room_id").addEventListener("change", function() {
+
+    let selectedId = this.value;
+
+    let room = roomsList.find(r => r.room_id == selectedId);
+
+    if (room) {
+
+        document.getElementById("room_no").value = room.room_no;
+        document.getElementById("block_name").value = room.block_name;
+        document.getElementById("room_capacity").value = room.room_capacity;
+        document.getElementById("noofoccupied").value = room.noofoccupied;
+        document.getElementById("status").value = String(room.status);
+
+    } else {
+
+        document.getElementById("room_no").value = "";
+        document.getElementById("block_name").value = "";
+        document.getElementById("room_capacity").value = "";
+        document.getElementById("noofoccupied").value = "";
+        document.getElementById("status").value = "1";
+
+    }
+});
+
+// Update room details
+function updateRoom() {
+
+    let room_id = document.getElementById("room_id").value;
+    let room_no = document.getElementById("room_no").value;
+    let block_name = document.getElementById("block_name").value.trim();
+    let room_capacity = document.getElementById("room_capacity").value;
+    let noofoccupied = document.getElementById("noofoccupied").value;
+    let status = document.getElementById("status").value;
+
+    if (!room_id) {
+        alert("Please select a Room ID.");
+        return;
+    }
+
+    if (
+        room_no === "" ||
+        block_name === "" ||
+        room_capacity === "" ||
+        noofoccupied === ""
+    ) {
+        alert("Please fill in all room details.");
+        return;
+    }
+
+    if (
+        !Number.isInteger(Number(room_no)) ||
+        Number(room_no) < 1 ||
+        !Number.isInteger(Number(room_capacity)) ||
+        Number(room_capacity) < 1 ||
+        !Number.isInteger(Number(noofoccupied)) ||
+        Number(noofoccupied) < 0 ||
+        Number(noofoccupied) > Number(room_capacity)
+    ) {
+        alert("Please enter valid values. Occupied beds cannot exceed room capacity.");
+        return;
+    }
+
+    fetch("/rooms/" + encodeURIComponent(room_id), {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            room_no: Number(room_no),
+            block_name: block_name,
+            room_capacity: Number(room_capacity),
+            noofoccupied: Number(noofoccupied),
+            status: Number(status)
+        })
+    })
+    .then(response => {
+
+        if (response.ok) {
+            return response.text();
+        }
+
+        return response.text().then(message => {
+            throw new Error(message);
+        });
+
+    })
+    .then(message => {
+
+        alert(message);
+        location.href = "list.html";
+
+    })
+    .catch(error => {
+
+        alert("Error: " + error.message);
+        console.error(error);
+
+    });
+}
+
+</script>
+
+</body>
+</html>

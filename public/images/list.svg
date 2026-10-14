@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 220" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgList" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#dbeafe"/>
+    </linearGradient>
+    <filter id="shadowList" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0f172a" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="10" y="10" width="480" height="200" rx="16" fill="url(#bgList)" stroke="#bfdbfe" stroke-width="1"/>
+
+  <!-- Left: Stylized Hostel Bed -->
+  <g transform="translate(45, 65)" filter="url(#shadowList)">
+    <!-- Bed Frame Back / Headboard -->
+    <rect x="0" y="10" width="8" height="85" rx="3" fill="#1e3a8a"/>
+    <!-- Footboard -->
+    <rect x="110" y="35" width="8" height="60" rx="3" fill="#1e3a8a"/>
+    <!-- Mattress base -->
+    <rect x="8" y="60" width="102" height="12" rx="2" fill="#2563eb"/>
+    <!-- Mattress / Duvet -->
+    <rect x="25" y="50" width="85" height="14" rx="4" fill="#3b82f6"/>
+    <!-- Pillow -->
+    <rect x="12" y="46" width="22" height="15" rx="4" fill="#ffffff" stroke="#93c5fd" stroke-width="1"/>
+    <!-- Fold line -->
+    <line x1="45" y1="50" x2="45" y2="64" stroke="#1d4ed8" stroke-width="2"/>
+    <!-- Bed Tag -->
+    <rect x="35" y="80" width="50" height="18" rx="9" fill="#dbeafe"/>
+    <text x="60" y="93" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" fill="#1e40af" text-anchor="middle">ROOM BED</text>
+  </g>
+
+  <!-- Center: Room Record Sheet / Clipboard -->
+  <g transform="translate(190, 30)" filter="url(#shadowList)">
+    <!-- Clipboard Board -->
+    <rect x="0" y="0" width="165" height="160" rx="8" fill="#1e40af"/>
+    <!-- Clip -->
+    <rect x="52" y="-10" width="60" height="20" rx="5" fill="#94a3b8" stroke="#ffffff" stroke-width="1.5"/>
+    <circle cx="82" cy="0" r="4" fill="#1e293b"/>
+
+    <!-- Paper Sheet -->
+    <rect x="8" y="14" width="149" height="138" rx="4" fill="#ffffff"/>
+
+    <!-- Sheet Header -->
+    <rect x="18" y="24" width="70" height="8" rx="3" fill="#1e3a8a"/>
+    <rect x="120" y="24" width="24" height="8" rx="3" fill="#10b981"/>
+
+    <!-- Table Header Line -->
+    <line x1="18" y1="40" x2="144" y2="40" stroke="#cbd5e1" stroke-width="1.5"/>
+
+    <!-- Row 1 -->
+    <circle cx="25" cy="52" r="4" fill="#3b82f6"/>
+    <rect x="36" y="48" width="50" height="8" rx="2" fill="#64748b"/>
+    <rect x="96" y="48" width="22" height="8" rx="2" fill="#93c5fd"/>
+    <rect x="125" y="48" width="18" height="8" rx="2" fill="#a7f3d0"/>
+
+    <!-- Row 2 -->
+    <circle cx="25" cy="72" r="4" fill="#3b82f6"/>
+    <rect x="36" y="68" width="45" height="8" rx="2" fill="#64748b"/>
+    <rect x="96" y="68" width="22" height="8" rx="2" fill="#93c5fd"/>
+    <rect x="125" y="68" width="18" height="8" rx="2" fill="#a7f3d0"/>
+
+    <!-- Row 3 -->
+    <circle cx="25" cy="92" r="4" fill="#3b82f6"/>
+    <rect x="36" y="88" width="55" height="8" rx="2" fill="#64748b"/>
+    <rect x="96" y="88" width="22" height="8" rx="2" fill="#93c5fd"/>
+    <rect x="125" y="88" width="18" height="8" rx="2" fill="#fecaca"/>
+
+    <!-- Row 4 -->
+    <circle cx="25" cy="112" r="4" fill="#3b82f6"/>
+    <rect x="36" y="108" width="40" height="8" rx="2" fill="#64748b"/>
+    <rect x="96" y="108" width="22" height="8" rx="2" fill="#93c5fd"/>
+    <rect x="125" y="108" width="18" height="8" rx="2" fill="#a7f3d0"/>
+
+    <!-- Bottom summary line -->
+    <rect x="18" y="132" width="126" height="10" rx="3" fill="#f1f5f9"/>
+    <rect x="24" y="135" width="45" height="4" rx="2" fill="#3b82f6"/>
+    <rect x="100" y="135" width="38" height="4" rx="2" fill="#10b981"/>
+  </g>
+
+  <!-- Right: Status Cards -->
+  <g transform="translate(375, 45)" filter="url(#shadowList)">
+    <!-- Card 1: Available -->
+    <rect x="0" y="0" width="85" height="55" rx="8" fill="#ffffff" stroke="#a7f3d0" stroke-width="1.5"/>
+    <circle cx="16" cy="18" r="7" fill="#10b981"/>
+    <text x="16" y="21" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="900" fill="#ffffff" text-anchor="middle">✓</text>
+    <text x="30" y="17" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" fill="#065f46">ACTIVE</text>
+    <text x="30" y="28" font-family="'Segoe UI', Roboto, sans-serif" font-size="7.5" fill="#64748b">STATUS 1</text>
+    <rect x="10" y="38" width="65" height="6" rx="3" fill="#d1fae5"/>
+
+    <!-- Card 2: Occupancy -->
+    <rect x="0" y="68" width="85" height="55" rx="8" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+    <circle cx="16" cy="86" r="7" fill="#2563eb"/>
+    <text x="16" y="89" font-family="'Segoe UI', Roboto, sans-serif" font-size="8" font-weight="900" fill="#ffffff" text-anchor="middle">🚪</text>
+    <text x="30" y="85" font-family="'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="700" fill="#1e40af">ROOMS</text>
+    <text x="30" y="96" font-family="'Segoe UI', Roboto, sans-serif" font-size="7.5" fill="#64748b">CAPACITY</text>
+    <rect x="10" y="106" width="65" height="6" rx="3" fill="#dbeafe"/>
+  </g>
+</svg>
